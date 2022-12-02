@@ -4,7 +4,10 @@ import styled from "styled-components"
 import logo from "../assets/yolocode8.png";
 import code from "../assets/code2.png";
 
-
+//I created Header Function here
+//I use useNavigate to navigate between pages
+//I put two images 
+//Under it I put a button for login in
 export default function Header(props){
     const navigate = useNavigate();
     return (
@@ -17,7 +20,8 @@ export default function Header(props){
         </Container>
     );
 }
-
+//I created div styles
+//I added all necessary css files
 const Container = styled.div`
     padding: 0 4rem;
     .logo{
