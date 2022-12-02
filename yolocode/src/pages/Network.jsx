@@ -13,17 +13,19 @@ import Profile from "../components/Profile";
 import '../components/App.css'
 
 export default function Network(){
+    //It is for scrollable website
+    //I also use useNavigate for navigating between pages
     const [isScrolled, setIsScrolled] = useState(false);
     const navigate = useNavigate();
 
     
-
+//I am trying to make our page scrollable
     window.onscroll = () =>{
         setIsScrolled(window.pageYOffset === 0 ? false : true);
         return ()=>(window.onscroll = null);
     };
 
-
+//I added profile page. It is imported from another page
     return(
         <Container>
             <Navbar isScrolled = {isScrolled} />
@@ -31,7 +33,7 @@ export default function Network(){
         </Container>
     );
 }
-
+//I added css specifications
 const Container = styled.div`
   background-color: black;
   padding-top: 90px;
