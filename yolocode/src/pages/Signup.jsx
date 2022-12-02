@@ -7,14 +7,16 @@ import Header from "../components/Header";
 import { firebaseAuth} from "../utils/firebase-config";
 
 export default function Signup(){
+    //It is for signup page
+    //Creating showPassword and setShowPassword variables
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
-
+//We also created formvalues and setFormValues
     const [formValues, setFormValues] = useState({
         email: "",
         password: "",
     });
-
+//It is for signing in
     const handleSignIn = async() =>{
         //console.log(formValues);
         try{
@@ -26,11 +28,11 @@ export default function Signup(){
             console.log(err);
         }
     }
-
+//It is for signin Authentication
     onAuthStateChanged(firebaseAuth, (currentUser)=>{
         if(currentUser) navigate("/");
     });
-
+//Here we have necessary html tags and written statements
     return( 
     <Container showPassword = {showPassword}>
         <BackgroundImage/>
@@ -64,7 +66,7 @@ export default function Signup(){
     
     );
 }
-
+//Here it is for css
 const Container = styled.div`
   position: relative;
   .content {
