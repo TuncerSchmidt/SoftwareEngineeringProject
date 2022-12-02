@@ -45,13 +45,16 @@ const MyStyles = styled.div`
 
 `;
 
-
+//It is for emailjs for sending an email
 export default function ContactForm(){
+    //I created const variables by using useState
     const[name, setName] = useState("");
     const[email, setEmail] = useState("");
     const[message, setMessage] = useState("");
 
     const form = useRef();
+    //Here is I fill necessary gaps for correct email
+    //If there is an error it will show us in the console 
     const sendEmail = (e) =>{
         e.preventDefault();
         alert("Message started");
@@ -67,7 +70,7 @@ export default function ContactForm(){
       e.target.reset();
       
     }
-
+//Here I use usercollectionRef to get necessary details from the page
     const userCollectionRef = collection(db, "contactdata");
 
     const handleSubmit =(e)=>{
@@ -87,6 +90,8 @@ export default function ContactForm(){
         setEmail("");
         setMessage("");
     }
+    //Here I wrote the form values with html tags.
+    //In addition to that I call the function to execute it
     return (
         <div>
             <MyStyles>
