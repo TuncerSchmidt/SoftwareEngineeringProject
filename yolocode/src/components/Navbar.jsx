@@ -6,7 +6,9 @@ import logo from "../assets/code2.png";
 import { firebaseAuth } from "../utils/firebase-config";
 import { FaPowerOff, FaSearch } from "react-icons/fa";
 
-
+//Navbar function is creared
+//Inside navbar we have 5 different pages
+//All links were added with their names
 export default function Navbar({isScrolled}){
     const links = [
         {name: "Home", link: "/"},
@@ -15,11 +17,13 @@ export default function Navbar({isScrolled}){
         {name: "Network", link: "/network"},
         {name: "Contact Us", link: "/contactus"},
     ];
+    
     const navigate = useNavigate();
     onAuthStateChanged(firebaseAuth, (currentUser)=>{
         if(!currentUser) navigate("/login");
     });
-
+    //I used useNavigate to travel between pages
+    //Here I put search bar
     const [showSearch, setShowSearch] = useState(false);
     const [inputHover, setInputHover] = useState(false);
     return(
@@ -64,7 +68,8 @@ export default function Navbar({isScrolled}){
         </Container>
     )
 }
-
+//I created styled.div
+//It includes all css values
 const Container = styled.div`
     .scrolled{
         background-color:black;
