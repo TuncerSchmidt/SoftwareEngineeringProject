@@ -19,23 +19,23 @@ import "../scss/about.css";
 import image3 from "../components/images/View3.jpeg";
 
 
-
+//In this page first I created my const variables
 export default function Contactus(){
     const [isScrolled, setIsScrolled] = useState(false);
     const navigate = useNavigate();
 
     const [width, setWidth] = useState(0);
     const carousel = useRef();
-
+//I used useeffect to set my width. 
     useEffect(()=>{
         setWidth(carousel.current.scrollWidth-carousel.current.offsetWidth);
     })
-
+//This part is for scrolling through all website
     window.onscroll = () =>{
         setIsScrolled(window.pageYOffset === 0 ? false : true);
         return ()=>(window.onscroll = null);
     };
-
+//I created a container I added Navbar inside it
     console.log(images);
     return(
         <Container>
@@ -89,7 +89,7 @@ export default function Contactus(){
         
     );
 }
-
+//Here I added css parts
 const Container = styled.div`
   background-color: black;
   
