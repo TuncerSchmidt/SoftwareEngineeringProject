@@ -15,6 +15,7 @@ import HeaderKey from "../components/HeaderKey";
 
 
 export default function ParttimeJobs(){
+    //It is for scrollable website
     const [isScrolled, setIsScrolled] = useState(false);
     const navigate = useNavigate();
 
@@ -22,7 +23,7 @@ export default function ParttimeJobs(){
         setIsScrolled(window.pageYOffset === 0 ? false : true);
         return ()=>(window.onscroll = null);
     };
-
+//It is for filtering keywords and keep it in state
     const [filterKeywords, setfilterKeywords] = useState([]);
 
     const addFilterKeywords = (data)=>{
@@ -45,7 +46,7 @@ export default function ParttimeJobs(){
         </Container>
     );
 }
-
+//Css implementation are done here
 const Container = styled.div`
   background-color: black;
   .header{
