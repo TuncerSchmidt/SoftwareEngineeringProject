@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
-
+//I created index function
+//It checks all users on api.github.com/users
+//It waits for json response
 const Index = () => {
 
     const [users, setUsers] = useState([]);
@@ -17,7 +19,9 @@ const Index = () => {
     useEffect(() => {
         getUsers();
     }, [])
-
+//Here I created all cardview 
+    //It includes necessary information
+    //At the end of each card there is a button to see more
 
     return (
       
