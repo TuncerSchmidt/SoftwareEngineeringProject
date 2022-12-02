@@ -5,6 +5,8 @@ import ContactInfoItem from './ContactInfoItems';
 import styled from 'styled-components';
 //import SectionTitle from './SectionTitle';
 
+//Here I added styled div
+//I created css designs here
 const ContactSectionStyle = styled.div`
     .contactSection__wrapper{
         display: flex;
@@ -16,7 +18,9 @@ const ContactSectionStyle = styled.div`
     }
     
 `;
-
+//I created Contact Section method here
+//Inside it wrote phone number, email, address
+//Next to them there are icons
 export default function ContactSection(){
     return (
         <ContactSectionStyle>
