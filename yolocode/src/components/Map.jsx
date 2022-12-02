@@ -2,6 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import MapImg from '../assets/map.png';
 
+
+
+//I created styled.div
+//I added all css values here
 const MapStyles = styled.div`
     background: url(${MapImg}) no-repeat center / cover;
     min-height: 400px;
@@ -25,7 +29,9 @@ const MapStyles = styled.div`
         border-radius: 12px;
     }
 `;
-
+//I created map function here
+//Basically I added a written statement
+//If user clicks it will take user to google map
 export default function Map(){
 
     return(
