@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 
 export default function Player(){
     const navigate = useNavigate();
+     //This part is for navigation
+    //Basically it plays an mp4 video
     return (
         <Container>
             <div className="player">
@@ -17,6 +19,7 @@ export default function Player(){
         </Container>
     )
 }
+//It is an area for css encoding
 
 const Container = styled.div`
     .player{
