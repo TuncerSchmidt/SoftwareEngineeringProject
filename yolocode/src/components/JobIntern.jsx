@@ -3,7 +3,9 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { AiFillPropertySafety } from "react-icons/ai";
 import styled from "styled-components";
-
+//I created jobintern
+	//I added all necessary titles
+	//I got all names by looking at json file
 const JobIntern = (props) =>{
 
     const{
@@ -35,7 +37,9 @@ const JobIntern = (props) =>{
     useEffect(()=>{
         importSvgs();
     }, [logo]);
-
+//I added all necessary design for internship
+	//I changed color
+	//I added all interships vertically
     return (
     <Container>
     <div className="job-container">
@@ -67,7 +71,8 @@ const JobIntern = (props) =>{
 }
 
 export default JobIntern;
-
+//I added all div styles
+		 //I added all css specification
 const Container = styled.div`
     .job-container{
         width: 50vw;
