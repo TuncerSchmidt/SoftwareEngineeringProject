@@ -14,7 +14,7 @@ import JobsIntern from "../components/JobsIntern";
 
 
 
-
+//Here I added code to make our website scrollable
 export default function ParttimeJobs(){
     const [isScrolled, setIsScrolled] = useState(false);
     const navigate = useNavigate();
@@ -23,7 +23,7 @@ export default function ParttimeJobs(){
         setIsScrolled(window.pageYOffset === 0 ? false : true);
         return ()=>(window.onscroll = null);
     };
-
+//I created my const values for jobs and put in state
     const [filterKeywords, setfilterKeywords] = useState([]);
 
     const addFilterKeywords = (data)=>{
@@ -31,7 +31,8 @@ export default function ParttimeJobs(){
         setfilterKeywords([...filterKeywords, data]);
       }
     }
-
+//I am filtering the keywords for internships
+//Here I added all jobs if there is at least 1. If empty nothing happens
     return(
         <Container>
             <Navbar isScrolled = {isScrolled} />
