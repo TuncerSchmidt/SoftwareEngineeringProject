@@ -4,6 +4,10 @@ import { useState } from "react";
 import { AiFillPropertySafety } from "react-icons/ai";
 import styled from "styled-components";
 
+//I created job variable
+//Inside it I added all necessary titles
+//I got all values by looking at api.json file
+
 const Job = (props) =>{
 
     const{
@@ -24,7 +28,7 @@ const Job = (props) =>{
     let keywords = [role, level, ...languages, ...tools];
 
     const[icon, setIcon] = useState("");
-
+//I used useEffect to import svgs
     const importSvgs =()=>{
         const logoSvg = import(`${logo}`).then((d)=>{
             
@@ -35,7 +39,7 @@ const Job = (props) =>{
     useEffect(()=>{
         importSvgs();
     }, [logo]);
-
+//I created cardview style in a horizontal way
     return (
     <Container>
     <div className="job-container">
@@ -70,7 +74,8 @@ const Job = (props) =>{
 }
 
 export default Job;
-
+//I created styled.div
+//I added css specifications
 const Container = styled.div`
     .job-container{
         width: 70vw;
