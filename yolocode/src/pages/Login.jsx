@@ -9,27 +9,31 @@ import { firebaseAuth} from "../utils/firebase-config";
 export default function Login(){
     
     const navigate = useNavigate();
-
+//I used state for navigation in login and signup
+    //I keep credentials for email and password
     const [formValues, setFormValues] = useState({
         email: "",
         password: "",
     });
-
+//I created my const for handling login
     const handleLogIn = async() =>{
         //console.log(formValues);
+        //taking values and storing
+        //Using Authentication Here
         try{
             const {email, password} = formValues;
             await signInWithEmailAndPassword(firebaseAuth, email, password);
 
         }catch(err){
+            //If not successful, giving error in console
             console.log(err);
         }
     }
-
+//If auth changes, it takes us to the main page
     onAuthStateChanged(firebaseAuth, (currentUser)=>{
         if(currentUser) navigate("/");
     });
-
+//Here is html part of our code
     return( 
     <Container>
         <BackgroundImage/>;
@@ -53,7 +57,7 @@ export default function Login(){
     
     );
 }
-
+//Here I added necessary css specification
 const Container = styled.div`
   position: relative;
   .content {
