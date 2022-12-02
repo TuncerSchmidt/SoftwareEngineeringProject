@@ -24,11 +24,13 @@ const ItemStyles = styled.div`
         resize: 20px;
     }
 `;
-
+// Here I am using MdPlace inside the contact info item
+//Basically I added necessary name, email, location on the left side
 export default function ContactInfoItem({
     icon = <MdPlace/>,
     text= 'this is an info',
 }){
+     //Here it is for html tags
     return (
         <ItemStyles>
             <div className="icon">{icon}</div>
