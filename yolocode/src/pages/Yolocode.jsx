@@ -9,14 +9,16 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
 export default function Login(){
+    //It is for scrollable
     const [isScrolled, setIsScrolled] = useState(false);
+    //It is for page navigation
     const navigate = useNavigate();
-
+//It is for scrolling
     window.onscroll = () =>{
         setIsScrolled(window.pageYOffset === 0 ? false : true);
         return ()=>(window.onscroll = null);
     };
-
+//Html tags are created here
 
     return(
         <Container>
@@ -39,7 +41,7 @@ export default function Login(){
         </Container>
     );
 }
-
+//Css are added here
 const Container = styled.div`
   background-color: black;
   .hero {
