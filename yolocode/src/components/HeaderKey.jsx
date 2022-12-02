@@ -1,5 +1,6 @@
 import React from "react";
-
+//I created header by using map
+//Basically I created many headers by looping
 const HeaderKey = ({keywords}) => {
     return (
         <div className="header-container">
