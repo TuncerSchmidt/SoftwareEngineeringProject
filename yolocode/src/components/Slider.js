@@ -9,6 +9,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Carousel } from 'bootstrap';
 
+//This part for carousel
+//Basically it is for creating slider
+//However I did not use this part in the code
 export const SimpleSlider=()=>{
     const settings = {
         dots: true,
