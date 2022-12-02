@@ -12,15 +12,17 @@ import Map from "../components/Map";
 
 
 export default function Contactus(){
+    //Here I wrote this code to make it scrollable
     const [isScrolled, setIsScrolled] = useState(false);
     const navigate = useNavigate();
-
+//In this part I added navbar inside it. I also added contact section and Map. I imported all from other pages
+ 
     window.onscroll = () =>{
         setIsScrolled(window.pageYOffset === 0 ? false : true);
         return ()=>(window.onscroll = null);
     };
 
-
+// I added css styling here
     return(
         <Container>
             <Navbar isScrolled = {isScrolled} />
